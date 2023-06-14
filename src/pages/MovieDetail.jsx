@@ -2,8 +2,10 @@ import { useState, useEffect, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFilmInfo } from 'services/GetMovie';
 import MovieInfo from 'components/MovieDetail/MovieInfo';
-import { Link, Outlet } from 'react-router-dom';
+import FilmInfo from 'components/FilmInfo/FilmInfo'
+import {  Outlet } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
+
 
 const MovieDetail = () => {
   const [movie, setMovie] = useState([]);
@@ -31,14 +33,7 @@ const MovieDetail = () => {
       {error && <div>Sorry, smth wrone! Try again</div>}
       {loading ? <Loader /> : <MovieInfo movie={movie} />}
       {!error && (
-        <ul>
-          <li>
-            <Link to="cast">cast</Link>
-          </li>
-          <li>
-            <Link to="reviews">reviews</Link>
-          </li>
-        </ul>
+       <FilmInfo/>
       )}
       <Suspense fallback={<Loader />}>
         <Outlet />

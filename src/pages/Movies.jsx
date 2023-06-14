@@ -38,7 +38,7 @@ function Movies() {
     <>
       <h2>Movies</h2>
       <Searcher onSubmit={handleSubmit} />
-      {error !== null && <div>Sorry,one more time!</div>}
+      {error !== null && <div>Sorry, one more time!</div>}
       {loading ? (
         <Loader />
       ) : (
