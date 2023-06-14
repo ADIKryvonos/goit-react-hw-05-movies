@@ -9,6 +9,7 @@ export const Form = styled.form`
   border: 1px solid orangered;
   border-radius: 3px;
   overflow: hidden;
+  margin: auto;
 `;
 
 export const Input = styled.input`
@@ -27,7 +28,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   display: inline-block;
-  width: 48px;
+  width: 60px;
   height: 48px;
   border: 0;
   opacity: 0.6;

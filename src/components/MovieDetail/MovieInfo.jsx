@@ -9,7 +9,9 @@ import {
   Raiting,
   H3,
   Text,
+  HeroImg,
 } from './MovieInfo.styled';
+import FilmInfo from 'components/FilmInfo/FilmInfo';
 
 const MovieInfo = ({
   movie: {
@@ -22,6 +24,7 @@ const MovieInfo = ({
     genres = [],
     first_air_date,
   },
+  error,
 }) => {
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
@@ -37,11 +40,7 @@ const MovieInfo = ({
         {poster_path ? (
           <Image src={imageSrc} alt={title || name} width="250px"></Image>
         ) : (
-          <Image
-            src="/assets/no-image.jpg"
-            alt={title || name}
-            width="250px"
-          ></Image>
+          <HeroImg>No Image</HeroImg>
         )}
       </ImageWrap>
       <InfoWrap>
@@ -57,6 +56,7 @@ const MovieInfo = ({
             return `${name} `;
           })}
         </Text>
+        {!error && <FilmInfo />}
       </InfoWrap>
     </Wrap>
   );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export const Ul = styled.ul`
   display: flex;
   padding: 0;
+  margin-top: 15px;
   gap: 20px;
 `;
 

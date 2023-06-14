@@ -11,7 +11,12 @@ const Searcher = ({ onSubmit }) => {
 
   return (
     <Form onSubmit={onFormSubmit}>
-      <Input type="text" name="name" autocomplete="off" />
+      <Input
+        type="text"
+        name="name"
+        autocomplete="off"
+        placeholder="Search your movie ... "
+      />
       <Button type="submit">Search</Button>
     </Form>
   );

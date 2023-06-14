@@ -2,8 +2,18 @@ import styled from 'styled-components';
 
 export const Wrap = styled.div`
   display: flex;
-  justify-content: center;
+
   gap: 20px;
+`;
+
+export const HeroImg = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 360px;
+  color: white;
+  background-color: grey;
 `;
 export const ImageWrap = styled.div``;
 export const Image = styled.img``;
