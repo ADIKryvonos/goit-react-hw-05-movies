@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { AiFillStar } from 'react-icons/ai';
 
 export const Ul = styled.ul`
   display: flex;
@@ -29,10 +28,6 @@ export const P = styled.p`
   font-weight: 500;
   font-size: 22px;
   margin: 0;
-`;
-
-export const Icon = styled(AiFillStar)`
-  color: orange;
 `;
 
 export const Title = styled.h2``;

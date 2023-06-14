@@ -1,4 +1,4 @@
-import { Ul, Li, H1, RLink, P, Icon } from './MoviesList.styled';
+import { Ul, Li, H1, RLink, P } from './MoviesList.styled';
 
 const MoviesList = ({ movies, title }) => {
   const img = 'https://image.tmdb.org/t/p/w500';
@@ -10,7 +10,7 @@ const MoviesList = ({ movies, title }) => {
         {movies.map(({ title, id, name, poster_path, vote_average }) => (
           <Li key={id}>
             <RLink to={`movies/${id}`}>
-              <img src={`${img}${poster_path}`} width="320px" alt={name} />:
+              <img src={`${img}${poster_path}`} width="320px" alt={name} />
               <P>{title || name}</P>
               {/* (raiting: {Math.round(vote_average)}
               <Icon />) */}
